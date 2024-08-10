@@ -190,7 +190,7 @@ function RammerheadEncode(baseUrl: any, prefix?: string) {
       api.shuffleDict(id, function (shuffleDict: any) {
         var shuffler = new StrShuffler(shuffleDict);
         if (prefix) {
-            ProxyHref = prefix + id + "/" + shuffler.shuffle(baseUrl);
+            ProxyHref = prefix + "/" + id + "/" + shuffler.shuffle(baseUrl);
         }
         else { ProxyHref = id + "/" + shuffler.shuffle(baseUrl); }
         console.log(ProxyHref);
