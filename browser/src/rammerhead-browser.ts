@@ -200,4 +200,5 @@ function RammerheadEncode(baseUrl: any, prefix?: string) {
   });
 }
 
-export { RammerheadEncode }
+//@ts-ignore
+window.RammerheadEncode = RammerheadEncode;

@@ -2,7 +2,7 @@ import * as esbuild from "esbuild";
 console.time('esbuild');
 
 const browser = await esbuild.build({
-    entryPoints: ['src/rammerhead.ts'],
+    entryPoints: ['src/rammerhead-browser.ts'],
     bundle: true,
     outfile: "dist/index.js",
     format: "iife",

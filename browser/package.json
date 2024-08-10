@@ -1,6 +1,6 @@
 {
   "name": "@rubynetwork/rammerhead-browser",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Easily use Rammerhead in your browser",
   "type": "module",
   "browser": "./dist/index.js",
