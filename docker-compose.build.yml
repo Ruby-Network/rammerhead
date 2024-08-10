@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  rammerhead:
+    image: rammerhead:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: rammerhead
+    restart: unless-stopped    
+    ports:
+      # The ports work like this: Host:Container (DO NOT MODIFY THE CONTAINER PORT)
+      #- "8081:8080"
+    #Extra stuff for advanced users below
+    #Change the command to build AND start:
+    #command:
+    #  - 
