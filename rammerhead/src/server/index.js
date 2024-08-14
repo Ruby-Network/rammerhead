@@ -22,7 +22,7 @@ import setupRoutes from './setupRoutes.js';
     */
 function createRammerhead(options) {
     const logger = new RammerheadLogging({
-        logLevel: options.logLevel || config.logLevel,
+        logLevel: options.logLevel ||= config.logLevel,
         generatePrefix: (level) => config.generatePrefix(level)
     });
 
@@ -42,9 +42,9 @@ function createRammerhead(options) {
         dontListen: true,
         ssl: config.ssl,
         getServerInfo: config.getServerInfo,
-        disableLocalStorageSync: options.disableLocalStorageSync || config.disableLocalStorageSync,
+        disableLocalStorageSync: options.disableLocalStorageSync ||= config.disableLocalStorageSync,
         jsCache: config.jsCache,
-        disableHttp2: options.disableHttp2 || config.disableHttp2
+        disableHttp2: options.disableHttp2 ||= config.disableHttp2
     });
 
     if (config.publicDir) addStaticDirToProxy(proxyServer, config.publicDir);
