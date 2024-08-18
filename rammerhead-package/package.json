@@ -11,8 +11,7 @@
     "types": "tsc --declaration --emitDeclarationOnly --outDir dist/ --declarationMap",
     "type-check": "tsc --noEmit",
     "build": "babel src/ --out-dir dist/ --extensions '.ts' --copy-files",
-    "release": "npm publish --access public",
-    "postinstall": "node setup.js"
+    "release": "npm publish --access public"
   },
   "repository": {
     "type": "git",
