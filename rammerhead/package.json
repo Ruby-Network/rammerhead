@@ -1,6 +1,6 @@
 {
   "name": "@rubynetwork/rh",
-  "version": "1.2.68",
+  "version": "1.2.69",
   "description": "User friendly web proxy powered by testcafe-hammerhead",
   "main": "src/index.js",
   "type": "module",
@@ -12,7 +12,8 @@
     "lint": "eslint -c .eslintrc.json --ext .js src",
     "clientes5": "es-check es5 src/client/*.js public/**/*.js",
     "release": "npm publish --access public",
-    "postinstall": "node src/setup.js"
+    "setup": "node src/setup.js",
+    "postinstall": "npm run setup"
   },
   "repository": {
     "type": "git",
