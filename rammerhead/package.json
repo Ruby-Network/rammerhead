@@ -1,6 +1,6 @@
 {
   "name": "@rubynetwork/rh",
-  "version": "1.2.69",
+  "version": "1.2.70",
   "description": "User friendly web proxy powered by testcafe-hammerhead",
   "main": "src/index.js",
   "type": "module",

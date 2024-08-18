@@ -3,6 +3,7 @@ import path from 'node:path';
 
 function setup() {
     try {
+        console.log("Setting up Rammerhead...");
         fs.mkdirSync(path.join(import.meta.dirname, '..', 'sessions'));
         fs.mkdirSync(path.join(import.meta.dirname, '..', 'cache-js'));
         fs.mkdirSync(path.join(import.meta.dirname, '..', 'public'));

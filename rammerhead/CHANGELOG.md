@@ -1,3 +1,7 @@
+## v1.2.70
+
+- Setup folder properly
+
 ## v1.2.64
 
 - catch websocket errors
