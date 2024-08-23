@@ -4,10 +4,10 @@ import { default as crh } from '@rubynetwork/rh/src/server/index.js';
 type logLevel = "disabled" | "debug" | "traffic" | "info" | "warn" | "error" 
 
 interface Options {
-    logLevel: logLevel
-    reverseProxy: boolean,
-    disableLocalStorageSync: boolean,
-    disableHttp2: boolean
+    logLevel?: logLevel
+    reverseProxy?: boolean,
+    disableLocalStorageSync?: boolean,
+    disableHttp2?: boolean
 }
 
 const scopes = [
@@ -45,10 +45,10 @@ function routeRhUpgrade(rh: crh, req: any, socket: any, head: any) {
 
 function createRammerhead(options: Options) {
     return crh({
-        logLevel: options.logLevel,
-        reverseProxy: options.reverseProxy,
-        disableLocalStorageSync: options.disableLocalStorageSync,
-        disableHttp2: options.disableHttp2
+        logLevel: options.logLevel || "debug",
+        reverseProxy: options.reverseProxy || false,
+        disableLocalStorageSync: options.disableLocalStorageSync || false,
+        disableHttp2: options.disableHttp2 || false,
     })
 }
 
