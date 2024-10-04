@@ -1,3 +1,8 @@
+# v1.3.4
+
+- Bump @rubynetwork/rh
+  - Fixes random crashes
+
 # 1.3.3
 
 - Depend on set version of @rubynetwork/rh
