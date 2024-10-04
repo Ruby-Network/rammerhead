@@ -1,3 +1,8 @@
+# v1.3.5
+
+- Bumps @rubynetwork/rh
+  - Fixes issue due to https://
+
 # v1.3.4
 
 - Bump @rubynetwork/rh

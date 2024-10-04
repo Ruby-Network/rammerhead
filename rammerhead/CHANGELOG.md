@@ -1,3 +1,7 @@
+## 1.2.74
+
+- Enforce https://
+
 ## 1.2.73
 
 - Fix crashing

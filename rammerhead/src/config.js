@@ -34,12 +34,13 @@ export default {
     //}),
     getServerInfo: (req) => {
         const { origin_proxy } = cookie.parse(req.headers.cookie || '');
+        console.log(req.socket)
         let origin;
         try {
             origin = new URL(origin_proxy);
         } catch (err) {
             console.log(err, req.headers.cookie);
-            origin = new URL(`${req.socket.encrypted ? 'https:' : 'http:'}//${req.headers.host}`);
+            origin = new URL(`https://${req.headers.host}`);
         }
         const { hostname, port, protocol } = origin;
         return {
