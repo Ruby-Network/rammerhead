@@ -1,3 +1,7 @@
+## v1.2.72
+
+- Hopefully fix the errors when running behind a reverse proxy
+
 ## v1.2.70
 
 - Setup folder properly

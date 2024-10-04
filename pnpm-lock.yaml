@@ -66,6 +66,9 @@ importers:
       async-exit-hook:
         specifier: ^2.0.1
         version: 2.0.1
+      cookie:
+        specifier: ^0.7.1
+        version: 0.7.1
       lru-cache:
         specifier: ^7.14.1
         version: 7.18.3
@@ -105,7 +108,7 @@ importers:
     dependencies:
       '@rubynetwork/rh':
         specifier: latest
-        version: 1.2.68(bufferutil@4.0.8)
+        version: 1.2.71(bufferutil@4.0.8)
       commander:
         specifier: ^12.0.0
         version: 12.1.0
@@ -1071,8 +1074,8 @@ packages:
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
 
-  '@rubynetwork/rh@1.2.68':
-    resolution: {integrity: sha512-6LSFs2paa0gdgyDNwGr0zXBJQfwb1pS0hkSQHIV5EuQMBcgZiZwTOiSCyo8faeJKHDaglLJCbcJ+XnbK4RyHyQ==}
+  '@rubynetwork/rh@1.2.71':
+    resolution: {integrity: sha512-nx7aDfC25ZzwK0zIMEbImKf2cv72h0Y5mYs5G/E3+rkhp36rAHNVrWV5QWYuPRMtudeiJpiMaei3i4F5KxtzDg==}
 
   '@types/estree@0.0.46':
     resolution: {integrity: sha512-laIjwTQaD+5DukBZaygQ79K1Z0jb1bPEMRrkXSLjtCcZm+abyp5YbrqpSLzD42FwWW6gK/aS4NYpJ804nG2brg==}
@@ -1302,6 +1305,10 @@ packages:
   convert-source-map@2.0.0:
     resolution: {integrity: sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==}
 
+  cookie@0.7.1:
+    resolution: {integrity: sha512-6DnInpx7SJ2AK3+CTUE/ZM0vWTUboZCegxhC2xiIydHR9jNuTAASBrfEpHhiGOZw/nX51bHt6YQl8jsGo4y/0w==}
+    engines: {node: '>= 0.6'}
+
   core-js-compat@3.38.0:
     resolution: {integrity: sha512-75LAicdLa4OJVwFxFbQR3NdnZjNgX6ILpVcVzcC4T2smerB5lELMrJQQQoWV6TiuC/vlaFqgU2tKQx9w5s0e0A==}
 
@@ -1441,9 +1448,6 @@ packages:
     resolution: {integrity: sha512-VHZ8gX+EDfz+97jGcgyGCyRia/dPOd6Xh9yPv8Bl1+SoaIwD+a/vlrOmGRUyOYu7MwUhc7CxqeaDZU13S4+EpA==}
     engines: {node: ^10.12.0 || >=12.0.0}
     hasBin: true
-
-  esotope-hammerhead@0.6.5:
-    resolution: {integrity: sha512-vjncN4nG+RvsUNFC0idHNw1Xzse8GUWn15tr8In0Q4EBscnELTdpQVfsF/cRsMlvSbJdd0gUrW6gK5U+LTmVCg==}
 
   esotope-hammerhead@0.6.8:
     resolution: {integrity: sha512-2Zhg0c6NfrNA4QT5s4+QG5WJQtq3Se7GonNwtNwfr7sVIo/7L8rirPfh9yyloEmDA7R0yPgD10teFxhf2vWyIw==}
@@ -2235,10 +2239,6 @@ packages:
   term-size@2.2.1:
     resolution: {integrity: sha512-wK0Ri4fOGjv/XPy8SBHZChl8CM7uMc5VML7SqiQ0zG7+J5Vr+RMQDoHa2CNT6KHUnTGIXH34UDMkPzAUyapBZg==}
     engines: {node: '>=8'}
-
-  testcafe-hammerhead@31.6.2:
-    resolution: {integrity: sha512-0whraISoT70LN9K6y1zgti30/M0seYVWlODZCWhUlDPZHSQDZaSj2G6QSamj2hfaki6DAB1qnE5x2FA8TvJcYA==}
-    engines: {node: '>=14.0.0'}
 
   testcafe-hammerhead@31.7.2:
     resolution: {integrity: sha512-wjZ3Y4fXnew6WaoMhD7jTe/zrzSYJMLZulX+/pXS6xed9meUx7zzCSc5epPJEW8Xy3Zo09n7w+m7+2SDej0/Iw==}
@@ -3621,13 +3621,13 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.17.1
 
-  '@rubynetwork/rh@1.2.68(bufferutil@4.0.8)':
+  '@rubynetwork/rh@1.2.71(bufferutil@4.0.8)':
     dependencies:
       async-exit-hook: 2.0.1
       lru-cache: 7.18.3
       mime: 2.6.0
       sticky-session-custom: 1.2.1
-      testcafe-hammerhead: 31.6.2(bufferutil@4.0.8)
+      testcafe-hammerhead: 31.7.2(bufferutil@4.0.8)
       uglify-js: 3.19.1
       uuid: 8.3.2
       ws: 8.18.0(bufferutil@4.0.8)
@@ -3872,6 +3872,8 @@ snapshots:
 
   convert-source-map@2.0.0: {}
 
+  cookie@0.7.1: {}
+
   core-js-compat@3.38.0:
     dependencies:
       browserslist: 4.23.3
@@ -4046,10 +4048,6 @@ snapshots:
       v8-compile-cache: 2.4.0
     transitivePeerDependencies:
       - supports-color
-
-  esotope-hammerhead@0.6.5:
-    dependencies:
-      '@types/estree': 0.0.46
 
   esotope-hammerhead@0.6.8:
     dependencies:
@@ -4783,38 +4781,6 @@ snapshots:
       strip-ansi: 6.0.1
 
   term-size@2.2.1: {}
-
-  testcafe-hammerhead@31.6.2(bufferutil@4.0.8):
-    dependencies:
-      '@adobe/css-tools': 4.4.0
-      '@electron/asar': 3.2.10
-      acorn-hammerhead: 0.6.2
-      bowser: 1.6.0
-      crypto-md5: 1.0.0
-      debug: 4.3.1
-      esotope-hammerhead: 0.6.5
-      http-cache-semantics: 4.1.1
-      httpntlm: 1.8.13
-      iconv-lite: 0.5.1
-      lodash: 4.17.21
-      lru-cache: 2.6.3
-      match-url-wildcard: 0.0.4
-      merge-stream: 1.0.1
-      mime: 1.4.1
-      mustache: 2.3.2
-      nanoid: 3.3.7
-      os-family: 1.1.0
-      parse5: 7.1.2
-      pinkie: 2.0.4
-      read-file-relative: 1.2.0
-      semver: 7.5.3
-      tough-cookie: 4.1.3
-      tunnel-agent: 0.6.0
-      ws: 7.5.10(bufferutil@4.0.8)
-    transitivePeerDependencies:
-      - bufferutil
-      - supports-color
-      - utf-8-validate
 
   testcafe-hammerhead@31.7.2(bufferutil@4.0.8):
     dependencies:

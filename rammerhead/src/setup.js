@@ -9,8 +9,7 @@ function setup() {
         fs.mkdirSync(path.join(import.meta.dirname, '..', 'public'));
     }
     catch (err) {
-        //steam roll over errors :D
-        //console.error('Something went wrong!\n', err)
+        console.error('Error occured while setting up:', err);
     }
 }
 

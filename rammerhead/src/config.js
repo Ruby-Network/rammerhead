@@ -1,6 +1,7 @@
 import fs from 'fs';
 import os from 'os';
 import path from 'path';
+import cookie from 'cookie';
 import RammerheadJSFileCache from './classes/RammerheadJSFileCache.js';
 import RammerheadJSMemCache from './classes/RammerheadJSMemCache.js';
 
@@ -25,12 +26,29 @@ export default {
     // this function's return object will determine how the client url rewriting will work.
     // set them differently from bindingAddress and port if rammerhead is being served
     // from a reverse proxy.
-    getServerInfo: () => ({
-        hostname: 'localhost',
-        port: 8080,
-        crossDomainPort: 8081,
-        protocol: 'http:'
-    }),
+    //getServerInfo: () => ({
+    //    hostname: 'localhost',
+    //    port: 8080,
+    //    crossDomainPort: 8081,
+    //    protocol: 'http:'
+    //}),
+    getServerInfo: (req) => {
+        const { origin_proxy } = cookie.parse(req.headers.cookie || '');
+        let origin;
+        try {
+            origin = new URL(origin_proxy);
+        } catch (err) {
+            console.log(err, req.headers.cookie);
+            origin = new URL(`${req.socket.encrypted ? 'https:' : 'http:'}//${req.headers.host}`);
+        }
+        const { hostname, port, protocol } = origin;
+        return {
+            hostname,
+            port,
+            crossDomainPort: port,
+            protocol
+        };
+    },
     // example of non-hard-coding the hostname header
     // getServerInfo: (req) => {
     //     return { hostname: new URL('http://' + req.headers.host).hostname, port: 443, crossDomainPort: 8443, protocol: 'https: };

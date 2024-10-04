@@ -1,6 +1,6 @@
 {
   "name": "@rubynetwork/rh",
-  "version": "1.2.71",
+  "version": "1.2.72",
   "description": "User friendly web proxy powered by testcafe-hammerhead",
   "main": "src/index.js",
   "type": "module",
@@ -27,6 +27,7 @@
   "homepage": "https://github.com/binary-person/rammerhead#readme",
   "dependencies": {
     "async-exit-hook": "^2.0.1",
+    "cookie": "^0.7.1",
     "lru-cache": "^7.14.1",
     "mime": "^2.5.2",
     "sticky-session-custom": "^1.2.0",
