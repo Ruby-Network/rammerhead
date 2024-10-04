@@ -32,6 +32,6 @@ process.on('uncaughtException', (err) => {
     } else {
         // probably a TypeError or something important
         console.error('About to throw: ' + err.message);
-        throw new Error(err.message);
+        //throw new Error(err.message);
     }
 });
