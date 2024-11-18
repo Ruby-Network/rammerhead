@@ -13,7 +13,7 @@
     "clientes5": "es-check es5 src/client/*.js public/**/*.js",
     "release": "npm publish --access public",
     "setup": "node src/setup.js",
-    "postinstall": "npm run setup && npm run build"
+    "postinstall": "node src/setup.js && node src/build.js"
   },
   "repository": {
     "type": "git",
