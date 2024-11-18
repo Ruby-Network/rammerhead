@@ -1,3 +1,7 @@
+# v1.3.6
+
+- Bumps deps
+
 # v1.3.5
 
 - Bumps @rubynetwork/rh
